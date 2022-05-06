@@ -14,8 +14,8 @@ public class LoginTest {
 //        WebElement accountLink = driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label"));
 //        accountLink.click();
         driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
-        driver.findElement(By.id("email")).sendKeys("cosmin@fasttrackit.org");
-        driver.findElement(By.id("pass")).sendKeys("123456");
+        driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
+        driver.findElement(By.id("pass")).sendKeys("Faringosept1");
         driver.findElement(By.cssSelector("#send2 > span > span")).click();
         driver.close();
     }
@@ -29,8 +29,8 @@ public class LoginTest {
 //        WebElement accountLink = driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label"));
 //        accountLink.click();
         driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
-        driver.findElement(By.id("email")).sendKeys("cosmin@fasttrackit.org");
-        driver.findElement(By.id("pass")).sendKeys("121233456");
+        driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
+        driver.findElement(By.id("pass")).sendKeys("Faringosept");
         driver.findElement(By.cssSelector("#send2 > span > span")).click();
         driver.close();
     }
@@ -44,8 +44,8 @@ public class LoginTest {
 //        WebElement accountLink = driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label"));
 //        accountLink.click();
         driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
-        driver.findElement(By.id("email")).sendKeys("cosminfasttrackit.org");
-        driver.findElement(By.id("pass")).sendKeys("121233456");
+        driver.findElement(By.id("email")).sendKeys("bustiucrgmail.com");
+        driver.findElement(By.id("pass")).sendKeys("faringoseptsgaeg");
         driver.findElement(By.cssSelector("#send2 > span > span")).click();
         driver.close();
     }
