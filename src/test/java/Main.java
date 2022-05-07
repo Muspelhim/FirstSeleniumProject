@@ -14,7 +14,8 @@ public class Main {
         PolitripSingUpTest test = new PolitripSingUpTest();
         test.signUpValidTest();
 //        test.signUpInvalidEmailTest();
-//        test.signUpValidNameFormatTest();
+//        test.signUpInvalidNameFormatTest();
+//        test.signUpInvalidNameAndEmailFormatTest();
 //
     }
 
