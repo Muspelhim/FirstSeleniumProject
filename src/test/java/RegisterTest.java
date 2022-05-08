@@ -22,6 +22,7 @@ public class RegisterTest {
         driver.close();
 
 
+
         }
 
     public void invalidRegisterTest(){
@@ -39,7 +40,7 @@ public class RegisterTest {
         driver.findElement(By.id("password")).sendKeys("Password1");
         driver.findElement(By.id("confirmation")).sendKeys("Password1");
         driver.findElement(By.cssSelector("#form-validate > div.buttons-set > button")).click();
-
+        driver.close();
 
 
     }

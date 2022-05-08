@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class PolitripSingUpTest {
 
@@ -17,7 +18,7 @@ public class PolitripSingUpTest {
         driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
         driver.findElement(By.cssSelector("#sign-up-password-input")).sendKeys("Faringosept1");
         driver.findElement(By.cssSelector("#sign-up-confirm-password-input")).sendKeys("Faringosept1");
-        driver.findElement(By.cssSelector("qa_loader-button")).click();
+        driver.findElement(By.cssSelector("#.button-label")).click();
 
 
     }
@@ -34,7 +35,7 @@ public class PolitripSingUpTest {
         driver.findElement(By.id("email")).sendKeys("bustiucrgmail.com");
         driver.findElement(By.cssSelector("#sign-up-password-input")).sendKeys("Faringosept1");
         driver.findElement(By.cssSelector("#sign-up-confirm-password-input")).sendKeys("Faringosept1");
-        driver.findElement(By.cssSelector("qa_loader-button")).click();
+        driver.findElement(By.cssSelector(" qa_loader-button")).click();
 
 
     }

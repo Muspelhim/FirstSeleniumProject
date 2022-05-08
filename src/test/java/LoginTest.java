@@ -15,9 +15,10 @@ public class LoginTest {
 //        accountLink.click();
         driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
         driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
-        driver.findElement(By.id("pass")).sendKeys("Faringosept1");
+        driver.findElement(By.id("pass")).sendKeys("Password1");
         driver.findElement(By.cssSelector("#send2 > span > span")).click();
         driver.close();
+
     }
 
     public void loginWithInvalidPasswordTest(){
