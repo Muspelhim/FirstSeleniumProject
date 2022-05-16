@@ -22,16 +22,19 @@ public class LoginTest {
 @Test
     public void loginWithValidCredentialsTest(){
 
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
+        driver.findElement(By.cssSelector(".skip-account .label")).click();
 //        WebElement accountLink = driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label"));
 //        accountLink.click();
-        driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
+        driver.findElement(By.cssSelector("a[title='Log in']")).click();
         driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
         driver.findElement(By.id("pass")).sendKeys("Password1");
-        driver.findElement(By.cssSelector("#send2 > span > span")).click();
-        String textFromElement = driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col2-left-layout > div > div.col-main > div.my-account > div > div.welcome-msg > p.hello > strong")).getText();
-        Assert.assertTrue(textFromElement.isDisplayed());
-        Assert.assertEquals("Hello, Razvan C Bustiuc!", textFromElement);
+        driver.findElement(By.id("send2")).click();
+        WebElement dashoardTextElement = driver.findElement(By.cssSelector(".page-title h1"));
+        driver.findElement(By.cssSelector(".hello strong")).getText();
+        Assert.assertTrue(dashoardTextElement.isDisplayed());
+        Assert.assertEquals("Hello, Razvan C Bustiuc!",dashoardTextElement);
+
+
 
 
 
@@ -39,33 +42,33 @@ public class LoginTest {
     }
 @Test
     public void loginWithInvalidPasswordTest(){
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
+        driver.findElement(By.cssSelector(".skip-account .label")).click();
 //        WebElement accountLink = driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label"));
 //        accountLink.click();
-        driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
+        driver.findElement(By.cssSelector("a[title='Log in']")).click();
         driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
         driver.findElement(By.id("pass")).sendKeys("Faringosept");
-        driver.findElement(By.cssSelector("#send2 > span > span")).click();
+        driver.findElement(By.id("send2")).click();
 
     }
 @Test
     public void loginWithInvalidEmail(){
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
+        driver.findElement(By.cssSelector(".skip-account .label")).click();
 //        WebElement accountLink = driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label"));
 //        accountLink.click();
-        driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
+        driver.findElement(By.cssSelector("a[title='Log in']")).click();
         driver.findElement(By.id("email")).sendKeys("bustiucrgmail.com");
         driver.findElement(By.id("pass")).sendKeys("faringoseptsgaeg");
-        driver.findElement(By.cssSelector("#send2 > span > span")).click();
+        driver.findElement(By.id("send2")).click();
 
     }
 @Test
     public void loginWithoutCredentialsTest(){
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
+        driver.findElement(By.cssSelector(".skip-account .label")).click();
 //        WebElement accountLink = driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label"));
 //        accountLink.click();
-        driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
-        driver.findElement(By.cssSelector("#send2 > span > span")).click();
+        driver.findElement(By.cssSelector("a[title='Log in']")).click();
+        driver.findElement(By.id("send2")).click();
 
     }
 
