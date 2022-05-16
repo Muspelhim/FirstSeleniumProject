@@ -27,7 +27,7 @@ public class PolitripSingUpTest {
         driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
         driver.findElement(By.cssSelector("#sign-up-password-input")).sendKeys("Faringosept1");
         driver.findElement(By.cssSelector("#sign-up-confirm-password-input")).sendKeys("Faringosept1");
-        driver.findElement(By.cssSelector("#.button-label")).click();
+        driver.findElement(By.cssSelector("span.button-label")).click();
 
 
     }
@@ -73,6 +73,10 @@ public class PolitripSingUpTest {
         driver.findElement(By.id("qa_loader-button")).click();
 
 
+    }
+
+    public void blankFieldsTest(){
+        driver.findElement(By.cssSelector("#\\ qa_loader-button")).click();
     }
     @After
     public void closeDriver(){
