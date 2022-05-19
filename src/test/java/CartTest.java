@@ -30,10 +30,19 @@ public class CartTest{
         driver.findElement(By.cssSelector("#swatch81 > span.swatch-label")).click();
        driver.findElement(By.cssSelector("#product_addtocart_form > div.product-shop > div.product-options-bottom > div.add-to-cart > div.add-to-cart-buttons > button > span > span")).click();
        driver.findElement(By.cssSelector("#shopping-cart-table > tbody > tr > td.a-center.product-cart-remove.last > a")).click();
-    Assert.assertTrue("SHOPPING CART IS EMPTY",true);
-    System.out.println("Test valid");
+    Assert.assertTrue(driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col1-layout > div > div > div.page-title > h1")).isDisplayed());
+
 
     }
+
+    @Test
+    public void emptyCartTest(){
+        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > div > a > span.label")).click();
+        Assert.assertTrue(driver.findElement(By.cssSelector("#header-cart > div.minicart-wrapper > p.empty")).isDisplayed());
+        System.out.println("Test valid");
+
+        }
+
     @After
     public void closeDriver(){
         driver.close();
