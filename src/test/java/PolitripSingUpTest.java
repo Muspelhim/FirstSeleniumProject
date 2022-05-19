@@ -75,6 +75,7 @@ public class PolitripSingUpTest {
 
     }
 
+@Test
     public void blankFieldsTest(){
         driver.findElement(By.cssSelector("#\\ qa_loader-button")).click();
     }
