@@ -1,4 +1,5 @@
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -27,8 +28,8 @@ public class PolitripSingUpTest {
         driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
         driver.findElement(By.cssSelector("#sign-up-password-input")).sendKeys("Faringosept1");
         driver.findElement(By.cssSelector("#sign-up-confirm-password-input")).sendKeys("Faringosept1");
-        driver.findElement(By.cssSelector("span.button-label")).click();
-
+        driver.findElement(By.cssSelector("#button.button")).click();
+       System.err.println("Test nevalid");
 
     }
     @Test

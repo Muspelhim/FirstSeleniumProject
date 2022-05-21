@@ -39,7 +39,6 @@ public class CartTest{
     public void emptyCartTest(){
         driver.findElement(By.cssSelector("#header > div > div.skip-links > div > div > a > span.label")).click();
         Assert.assertTrue(driver.findElement(By.cssSelector("#header-cart > div.minicart-wrapper > p.empty")).isDisplayed());
-        System.out.println("Test valid");
 
         }
 

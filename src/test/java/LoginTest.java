@@ -27,8 +27,7 @@ public class LoginTest {
         driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
         driver.findElement(By.id("pass")).sendKeys("Password1");
         driver.findElement(By.id("send2")).click();
-        Assert.assertTrue("Hello, Razvan C Bustiuc!",true);
-    System.out.println("Test valid");
+        Assert.assertTrue((driver.findElement(By.cssSelector(".hello strong")).isDisplayed()));
 
 
 
@@ -43,8 +42,9 @@ public class LoginTest {
         driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
         driver.findElement(By.id("pass")).sendKeys("Faringosept");
         driver.findElement(By.id("send2")).click();
-        Assert.assertFalse("Invalid login or password.",false);
-    System.out.println("Test valid");
+        Assert.assertTrue((driver.findElement(By.cssSelector("li span")).isDisplayed()));
+
+
 
     }
 @Test
