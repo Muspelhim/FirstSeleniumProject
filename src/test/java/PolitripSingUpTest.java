@@ -29,7 +29,7 @@ public class PolitripSingUpTest {
         driver.findElement(By.cssSelector("#sign-up-password-input")).sendKeys("Faringosept1");
         driver.findElement(By.cssSelector("#sign-up-confirm-password-input")).sendKeys("Faringosept1");
         driver.findElement(By.cssSelector("#button.button")).click();
-       System.err.println("Test nevalid");
+
 
     }
     @Test
@@ -42,7 +42,7 @@ public class PolitripSingUpTest {
         driver.findElement(By.id("email")).sendKeys("bustiucrgmail.com");
         driver.findElement(By.cssSelector("#sign-up-password-input")).sendKeys("Faringosept1");
         driver.findElement(By.cssSelector("#sign-up-confirm-password-input")).sendKeys("Faringosept1");
-        driver.findElement(By.cssSelector("#\\ qa_loader-button")).click();
+        driver.findElement(By.id("qa_loader-button")).click();
 
 
 

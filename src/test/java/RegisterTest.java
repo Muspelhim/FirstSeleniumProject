@@ -17,7 +17,7 @@ public class RegisterTest {
     }
 @Test
     public void validRegisterTest(){
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a")).click();
+        driver.findElement(By.cssSelector("div.skip-links > div > a")).click();
         driver.findElement(By.cssSelector("#header-account > div > ul > li:nth-child(5) > a")).click();
         driver.findElement(By.cssSelector("#firstname")).click();
         driver.findElement(By.id("firstname")).sendKeys("Razvan");

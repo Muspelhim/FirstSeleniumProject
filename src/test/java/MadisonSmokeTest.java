@@ -22,10 +22,10 @@ public class MadisonSmokeTest {
   @Test
     public void MadisonSmokeTest () {
 
-        WebElement accesories = driver.findElement(By.cssSelector("#nav > ol > li.level0.nav-3.parent > a"));
+        WebElement accesories = driver.findElement(By.cssSelector("li.level0.nav-3.parent > a"));
         Actions actions = new Actions(driver);
         actions.moveToElement(accesories).perform();
-        driver.findElement(By.cssSelector("#nav > ol > li.level0.nav-3.active.parent > ul > li.level1.nav-3-3.active > a")).click();
+        driver.findElement(By.cssSelector("li.level0.nav-3.active.parent > ul > li.level1.nav-3-3.active > a")).click();
         driver.findElement(By.cssSelector("#product-collection-image-433")).click();
 
 

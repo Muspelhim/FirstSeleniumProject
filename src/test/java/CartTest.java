@@ -20,11 +20,11 @@ public class CartTest{
     }
 @Test
    public void AddToCartTest() {
-        driver.findElement(By.cssSelector("#nav > ol > li.level0.nav-2.parent > a")).click();
-        WebElement menCategory = driver.findElement(By.cssSelector("#nav > ol > li.level0.nav-2.parent > a"));
+        driver.findElement(By.cssSelector("li.level0.nav-2.parent>a")).click();
+        WebElement menCategory = driver.findElement(By.cssSelector("li.level0.nav-2.parent>a"));
         Actions actions = new Actions(driver);
         actions.moveToElement(menCategory).perform();
-        driver.findElement(By.cssSelector("#nav > ol > li.level0.nav-2.parent > ul > li.level1.nav-2-2 > a")).click();
+        driver.findElement(By.cssSelector("li.level1.nav-2-2 >a")).click();
         driver.findElement(By.cssSelector("#product-collection-image-403")).click();
         driver.findElement(By.cssSelector("#swatch27 > span.swatch-label > img")).click();
         driver.findElement(By.cssSelector("#swatch81 > span.swatch-label")).click();
@@ -37,7 +37,7 @@ public class CartTest{
 
     @Test
     public void emptyCartTest(){
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > div > a > span.label")).click();
+        driver.findElement(By.cssSelector("div.skip-links > div > div > a > span.label")).click();
         Assert.assertTrue(driver.findElement(By.cssSelector("#header-cart > div.minicart-wrapper > p.empty")).isDisplayed());
 
         }

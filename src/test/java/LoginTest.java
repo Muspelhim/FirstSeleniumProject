@@ -22,8 +22,8 @@ public class LoginTest {
 @Test
     public void loginWithValidCredentialsTest(){
 
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a")).click();
-        driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
+        driver.findElement(By.cssSelector("div.skip-links > div > a")).click();
+        driver.findElement(By.cssSelector("div >ul > li.last > a")).click();
         driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
         driver.findElement(By.id("pass")).sendKeys("Password1");
         driver.findElement(By.id("send2")).click();
@@ -37,7 +37,7 @@ public class LoginTest {
     }
 @Test
     public void loginWithInvalidPasswordTest(){
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a")).click();
+        driver.findElement(By.cssSelector("div.skip-links > div > a")).click();
         driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
         driver.findElement(By.id("email")).sendKeys("bustiucr@gmail.com");
         driver.findElement(By.id("pass")).sendKeys("Faringosept");
@@ -49,8 +49,8 @@ public class LoginTest {
     }
 @Test
     public void loginWithInvalidEmail(){
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
-        driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
+        driver.findElement(By.cssSelector("div.skip-links > div > a > span.label")).click();
+        driver.findElement(By.cssSelector("div.skip-content > div.links > ul > li.last > a")).click();
         driver.findElement(By.id("email")).sendKeys("bustiucrgmail.com");
         driver.findElement(By.id("pass")).sendKeys("faringoseptsgaeg");
         driver.findElement(By.id("send2")).click();
@@ -58,8 +58,8 @@ public class LoginTest {
     }
 @Test
     public void loginWithoutCredentialsTest(){
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
-        driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
+        driver.findElement(By.cssSelector("div.skip-links > div > a span.label")).click();
+        driver.findElement(By.cssSelector("#header-account ul li.last a")).click();
         driver.findElement(By.id("send2")).click();
 
     }
